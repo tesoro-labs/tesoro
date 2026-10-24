@@ -2,7 +2,7 @@
 
 > An Autonomous Economic Governance Layer (AEGL) for AI agents: it decides whether an agent may spend, before it spends, and records which control decided. Deterministic engines, no model in the decision path, integer money, append-only hash-chained evidence.
 
-- Package: https://pypi.org/project/tesoro/ (version 0.1.2, Apache-2.0)
+- Package: https://pypi.org/project/tesoro/ (version 0.1.3, Apache-2.0)
 - Source: https://github.com/tesoro-labs/tesoro
 - Standard: https://github.com/tesoro-labs/aegs (AEGS 0.1: 12 sections, 90 clauses, 151 executing test vectors)
 

@@ -46,6 +46,21 @@ and hides fixes tells a reader what was added and not what was wrong.
 
 Nothing yet.
 
+## [0.1.3] — 2026-10-24
+
+**The same code as 0.1.2, released again so that a source distribution exists.**
+
+0.1.2's wheel reached PyPI; its sdist did not. PyPI refused `tesoro-0.1.2.tar.gz` with *"This
+filename was previously used by a file that has since been deleted"*, and a filename PyPI has
+seen can never be uploaded again. When the earlier file was uploaded and removed is not recorded
+here. The only way to ship an sdist was a new version, so 0.1.3 changes the version number and
+nothing else.
+
+That makes 0.1.0, 0.1.1 and 0.1.2 three wheel-only releases, each for a different reason: a hand
+upload that named one file, a failed attestation step, and a reused filename. The release
+workflow's guard checks that `dist/` holds exactly one wheel and one sdist *before* uploading; it
+cannot know that PyPI will refuse one of them afterwards, and an upload is not atomic across files.
+
 ## [0.1.2] — 2026-10-24
 
 Released 2026-10-24. These notes were first cut on 2026-08-28, and 0.1.2 was not published then:
@@ -208,6 +223,9 @@ that cut and before the release, and ships in it; the 08-28 notes follow the rul
 The first release that is not a rename or a repackage. Two red-team findings closed, a kill switch,
 anchored evidence, a vertical conformance profile the reference implementation deliberately fails,
 and **an sdist** — 0.1.0 and 0.1.1 both shipped wheel-only because a hand upload omitted it.
+
+> **Corrected 2026-10-24:** the sentence above was written before release and turned out false.
+> 0.1.2 shipped wheel-only too; PyPI refused the sdist's filename as previously used. See 0.1.3.
 
 ### Added
 
