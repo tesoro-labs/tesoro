@@ -61,6 +61,14 @@ upload that named one file, a failed attestation step, and a reused filename. Th
 workflow's guard checks that `dist/` holds exactly one wheel and one sdist *before* uploading; it
 cannot know that PyPI will refuse one of them afterwards, and an upload is not atomic across files.
 
+> **Corrected 2026-10-24, after release:** 0.1.3's sdist was refused too, with the same message.
+> Two consecutive versions refused as "previously used" makes a stale upload of each unlikely; the
+> more probable cause is PyPI's filename registry, which is global and outlives deleted projects, so
+> an earlier, deleted project named `tesoro` may have used these sdist names. Unconfirmed. The wheel
+> on PyPI is pure Python and installs everywhere. The sdist is attached to the
+> [GitHub release](https://github.com/tesoro-labs/tesoro/releases/tag/v0.1.3) instead, with
+> SHA-256 hashes; the wheel there is byte-identical to PyPI's.
+
 ## [0.1.2] — 2026-10-24
 
 Released 2026-10-24. These notes were first cut on 2026-08-28, and 0.1.2 was not published then:
