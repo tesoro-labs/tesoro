@@ -44,6 +44,14 @@ and hides fixes tells a reader what was added and not what was wrong.
 
 ## [Unreleased]
 
+Nothing yet.
+
+## [0.1.2] — 2026-10-24
+
+Released 2026-10-24. These notes were first cut on 2026-08-28, and 0.1.2 was not published then:
+the PyPI trusted publisher still named the old organisation. Everything above the rule landed after
+that cut and before the release, and ships in it; the 08-28 notes follow the rule unchanged.
+
 ### Added
 
 - **A counterparty's jurisdiction, declared by an operator and never inferred.**
@@ -193,7 +201,9 @@ and hides fixes tells a reader what was added and not what was wrong.
   the example instead of reading it, which is now the rule for anything published as a command or a
   config.
 
-## [0.1.2] — 2026-08-28
+---
+
+**First cut of 0.1.2, written 2026-08-28:**
 
 The first release that is not a rename or a repackage. Two red-team findings closed, a kill switch,
 anchored evidence, a vertical conformance profile the reference implementation deliberately fails,
